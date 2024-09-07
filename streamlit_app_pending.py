@@ -23,11 +23,10 @@ if my_dataframe:
 
  submitted=st.button('Submit')
  if submitted:
-   try: 
+  
     for sql in lis1:
         session.sql(sql).collect()
     st.success('Someone clicked the button', icon = '👍')
-   except:
-       st.write('Something went wrong.')
+
 else:
     st.success('There are no pending order right now', icon = '👍')
