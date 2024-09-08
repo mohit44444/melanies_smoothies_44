@@ -18,10 +18,11 @@ if my_dataframe:
  editable_df = st.data_editor(my_dataframe)
  lis1=[]
  st.write(editable_df.loc[0]["ORDER_UID"])   
- for row in editable_df:
-  
-  if row[1]:
-    lis1.append('update smoothies.public.orders set order_filled='+"'TRUE'"+' where order_uid='+str(row[0]))
+ for i in range(0,len(editable_df)):
+  st.write(i)
+  st.write(type(i))
+  if i[1]:
+    lis1.append('update smoothies.public.orders set order_filled='+"'TRUE'"+' where order_uid='+str(i[0]))
  submitted=st.button('Submit')
  if submitted:
   
