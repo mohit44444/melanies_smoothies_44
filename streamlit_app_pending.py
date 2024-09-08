@@ -24,7 +24,6 @@ if my_dataframe:
  if submitted:
   
     for sql in lis1:
-        st.write(sql)
         session.sql(sql).collect()
     st.success('Someone clicked the button', icon = '👍')
 
