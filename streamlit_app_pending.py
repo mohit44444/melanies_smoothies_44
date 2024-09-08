@@ -17,10 +17,9 @@ my_dataframe = session.table("smoothies.public.orders").filter(col("ORDER_FILLED
 if my_dataframe:
  editable_df = st.data_editor(my_dataframe)
  lis1=[]
-
- st.write(editable_df)
+    
  for row in editable_df:
-  st.write(row+row[0]+row[1])
+  st.write(row+type(row))
   if row[1]:
     lis1.append('update smoothies.public.orders set order_filled='+"'TRUE'"+' where order_uid='+str(row[0]))
  submitted=st.button('Submit')
