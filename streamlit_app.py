@@ -29,7 +29,7 @@ if ingredients_list:
             values ('""" + ingredients_string + """','"""+name_on_order+"""')"""
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response
+st.text(fruityvice_response)
 
 st.write(my_insert_stmt)
 time_to_insert=st.button('Submit Order')
