@@ -17,6 +17,8 @@ my_dataframe = session.table("smoothies.public.orders").filter(col("ORDER_FILLED
 if my_dataframe:
  editable_df = st.data_editor(my_dataframe)
  lis1=[]
+
+ st.write(editable_df)
  for row in editable_df:
   st.write(row+row[0]+row[1])
   if row[1]:
