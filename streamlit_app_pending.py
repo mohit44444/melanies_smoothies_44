@@ -19,7 +19,7 @@ if my_dataframe:
  lis1=[]
     
  for row in editable_df:
-  st.write(row+type(row))
+  st.write(type(row))
   if row[1]:
     lis1.append('update smoothies.public.orders set order_filled='+"'TRUE'"+' where order_uid='+str(row[0]))
  submitted=st.button('Submit')
