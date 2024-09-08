@@ -20,13 +20,12 @@ if my_dataframe:
  for row in editable_df:
   if row[1]:
    lis1.append('update smoothies.public.orders set order_filled='+"'TRUE'"+' where order_uid='+str(row[0]))
- st.write('1')
  submitted=st.button('Submit')
  if submitted:
   
     for sql in lis1:
-        st.write('2')
         session.sql(sql).collect()
+        st.write('3')
     st.success('Someone clicked the button', icon = '👍')
 
 else:
